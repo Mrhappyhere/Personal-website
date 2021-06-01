@@ -37,13 +37,13 @@ hr{
   margin:100px auto;
 }
 a{
-  color: #a64dff;
+  color: #000000;
   font-family: 'Montserrat', sans-serif;
   margin: 10px 20px;
   text-decoration: none;
 }
 a:hover{
-  color: #e6ccff;
+  color: #ffffff;
 }
 .top-container {
   background-color: #bf80ff;
