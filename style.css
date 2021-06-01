@@ -131,16 +131,13 @@ a:hover{
 /* arrow */
 
 
-body{
-  background: #ffffff;
-}
+
 
 .arrow-container{
   width: 100px;
   height: 100px;
   margin: 0 auto;
   position: absolute;
-  bottom: 25px;
   left: 0;
   right: 0;
 }
