@@ -128,85 +128,103 @@ a:hover{
 }
 
 
-//arrow
-.container {
-  position: relative;
-  width: 24px;
-  height: 24px;
+/* arrow */
+
+
+body{
+  background: #ffffff;
 }
 
-.chevron {
+.arrow-container{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
   position: absolute;
-  width: 28px;
-  height: 8px;
-  opacity: 0;
-  transform: scale3d(0.5, 0.5, 0.5);
-  animation: move 3s ease-out infinite;
-}
-
-.chevron:first-child {
-  animation: move 3s ease-out 1s infinite;
-}
-
-.chevron:nth-child(2) {
-  animation: move 3s ease-out 2s infinite;
-}
-
-.chevron:before,
-.chevron:after {
-  content: ' ';
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 51%;
-  background: #9933ff;
-}
-
-.chevron:before {
+  bottom: 25px;
   left: 0;
-  transform: skew(0deg, 30deg);
-}
-
-.chevron:after {
   right: 0;
-  width: 50%;
-  transform: skew(0deg, -30deg);
 }
 
-@keyframes move {
-  25% {
-    opacity: 1;
+.arrow-1{
+  width: 100px;
+  height: 100px;
+  background: #dd99ff;
+  opacity: 0.5;
+  border-radius: 50%;
+  position: absolute;
+}
 
+.arrow-2{
+  width: 60px;
+  height: 60px;
+  background: #cc66ff;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+  display: table;
+}
+
+.arrow-2:before{
+  width: 52px;
+  height: 52px;
+  content: "";
+  border: 2px solid #e0e0eb;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+}
+
+.arrow-2 i.fa{
+  font-size: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  color: #e0e0eb;
+}
+
+/* Custom Animate.css */
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.4, .4, .4);
+            transform: scale3d(.4, .4, .4);
   }
-  33% {
-    opacity: 1;
-    transform: translateY(30px);
+
+  50% {
+    opacity: 0.5;
   }
-  67% {
-    opacity: 1;
-    transform: translateY(40px);
-  }
+  
   100% {
     opacity: 0;
-    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
   }
 }
 
-.text {
-  display: block;
-  margin-top: 75px;
-  margin-left: -30px;
-  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
-  font-size: 12px;
-  color: #000000;
-  text-transform: uppercase;
-  white-space: nowrap;
-  opacity: .25;
-  animation: pulse 2s linear alternate infinite;
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(.4, .4, .4);
+            transform: scale3d(.4, .4, .4);
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+  
+  100% {
+    opacity: 0;
+  }
 }
 
-@keyframes pulse {
-  to {
-    opacity: 1;
-  }
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
 }
